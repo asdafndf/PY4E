@@ -1,7 +1,6 @@
 # %%
-from statistics import mean
-
-inputs = []
+total = 0
+count = 0
 
 while True:
     user_input = input("Enter a number: ")
@@ -12,16 +11,14 @@ while True:
     except ValueError:
          print("Invalid input")
     else:
-        inputs.append(float_user_input)
+        total += float_user_input
+        count += 1
 
-total = sum(inputs)
-length = len(inputs)
-
-if length:
-    average = mean(inputs)
+if count:
+    average = total / count
 else:
     average = "Can not calculate average"
 
-print(f"{total} {length} {average}")
+print(total, count, average)
 
 
