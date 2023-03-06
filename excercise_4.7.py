@@ -21,10 +21,10 @@ try:
         raise ValueOutOfRangeError
 
 except ValueError:
-    print("Not valid score")
+    print("Not a valid score")
 
 except ValueOutOfRangeError:
-    print("Not valid score")
+    print("Not a valid score")
     
 else:
     print(computepay(score))
